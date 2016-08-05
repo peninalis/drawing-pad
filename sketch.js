@@ -16,20 +16,19 @@ function draw() {
   fill(myred,mygreen,myblue);
   ellipse(mouseX,mouseY, 10);
   fill(15,15,15);
-  if  myred>255 {
-  myred=0;}
-  if mousePressed();
-  fill(255,255,255);
-  ellipse(mouseIsPressed,mouseIsPressed,50);
-  
+  if  (myred>255) {
+   myred=0;
+    
   }
+  if (mouseIsPressed){
+    fill(255,255,255);
+    ellipse(mouseX,mouseY,50);
+  }
+  
   myred=myred+.5;
   myblue=myblue+.5;
   mygreen=mygreen+.5
-  if (myblue<= 0) {
-    myblue=255;
+  if (myblue>= 255) {
+    myblue=0;
   }
-  
-  
-  
-}0
+}
